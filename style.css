@@ -1,4 +1,4 @@
-@media only screen and (min-width: 461px) {    
+@media only screen and (min-width: 601px) {    
     *{
         padding: 0;
         margin: 0;
@@ -144,12 +144,18 @@
         display:flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
         height: 100vh;
         background-image: url("img/Background-2.png");
         background-repeat: none;
         background-size:cover;
         background-position: 50% 0;
+    }
+    .top{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
     }
     .seventy{
         width: 70%;
@@ -206,6 +212,80 @@
     .eighty{
         display: flex;
         width: 80%;
+    }
+    .carousel{
+        position: relative;
+        width: 100%;
+        min-width:930px;
+        height: 194px;
+        display: flex;
+        align-items: center;
+        background-color: RGBA(65,79,107, 0.9);
+        height: 196px;
+        bottom:0;
+    }
+    .slider{
+        margin: 0 auto;
+        display: flex;
+        height: 136px;
+        width: 916px;
+        overflow-x: hidden;
+    }
+    .slides{
+        align-items: center;
+        display: flex;
+    }
+    .slides input{
+        display:none;
+    }
+    .slide{
+        display: flex;
+        height: 136px;
+        width: 237px;
+        transition: 1s;
+    }
+    .navigation{
+        position: absolute;
+        width:auto;
+        left: 50%;
+        bottom: 10px;
+        display: flex;
+        justify-content: center;
+        z-index: 3;
+    }
+    .nav-btn{
+        margin: 0 2px;
+        border-radius: 50%;
+        background: white;
+        opacity: 0.3;
+        padding: 5px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .nav-button:not(:last-child){
+        margin-right:40px;
+    }
+    .nav-btn:hover{
+        opacity: 1;
+    }
+    #radio1:checked  ~ .first{
+        margin-left: 0;
+        transition: 1s
+    }
+    #radio2:checked  ~ .first{
+        margin-left: -474px;
+    }
+    #radio3:checked  ~ .first{
+        margin-left: -948px;
+    }
+
+    .navigation-auto{
+        position: absolute;
+        width:auto;
+        left: 50%;
+        bottom: 10px;
+        display: flex;
+        justify-content: center;
     }
     .tabs{
         display:flex;

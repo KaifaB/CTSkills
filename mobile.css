@@ -146,12 +146,18 @@
         display:flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
-        height: 100vh;
+        height: 60vh;
         background-image: url("img/Background-2.png");
         background-repeat: none;
         background-size:cover;
         background-position: 50% 0;
+    }
+    .top{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
     }
     .seventy{
         width: 70%;
@@ -160,7 +166,6 @@
     }
     .numbers{
         position: relative;
-        margin-top: 60px;
         font-size: 64px;
         font-family: 'Oswald', sans-serif;
         color: #566684a2;
@@ -209,6 +214,79 @@
     .eighty{
         display: flex;
         width: 80%;
+    }
+    .carousel{
+        position: relative;
+        width: 100%;
+        min-width:360px;
+        height: 80px !important;
+        display: flex;
+        align-items: center;
+        background-color: RGBA(65,79,107, 0.9);
+        height: 196px;
+    }
+    .slider{
+        margin: 0 auto;
+        display: flex;
+        height: 80px;
+        width: 90%;
+        overflow-x: hidden;
+    }
+    .slides{
+        align-items: center;
+        display: flex;
+    }
+    .slides input{
+        display:none;
+    }
+    .slide{
+        display: flex;
+        height: 40px;
+        width: 90px;
+        transition: 1s;
+    }
+    .navigation{
+        position: absolute;
+        width:auto;
+        left: 50%;
+        bottom: 6px;
+        display: flex;
+        justify-content: center;
+        z-index: 3;
+    }
+    .nav-btn{
+        margin: 0 4px;
+        border-radius: 50%;
+        background: white;
+        opacity: 0.3;
+        padding: 3px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .nav-button:not(:last-child){
+        margin-right:40px;
+    }
+    .nav-btn:hover{
+        opacity: 1;
+    }
+    #radio1:checked  ~ .first{
+        margin-left: 0;
+        transition: 1s
+    }
+    #radio2:checked  ~ .first{
+        margin-left: -180px;
+    }
+    #radio3:checked  ~ .first{
+        margin-left: -360px;
+    }
+
+    .navigation-auto{
+        position: absolute;
+        width:auto;
+        left: 50%;
+        bottom: 10px;
+        display: flex;
+        justify-content: center;
     }
     .tabs{
         display:flex;
